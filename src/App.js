@@ -8,14 +8,13 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    const config ={
-
-        apiKey: "AIzaSyBKuPWKX1NqzRzcqH_2t07r6rgv_-6F4_w",
-        authDomain: "react-firebase-forum.firebaseapp.com",
-        databaseURL: "https://react-firebase-forum.firebaseio.com",
-        projectId: "react-firebase-forum",
-        storageBucket: "",
-        messagingSenderId: "163867316537"
+    const config = {
+      apiKey: process.env.REACT_APP_FIREBASE_KEY,
+      authDomain: process.env.REACT_APP_FIREBASE_DOMAIN,
+      databaseURL: process.env.REACT_APP_FIREBASE_DATABASE,
+      projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+      storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+      messagingSenderId: process.env.REACT_APP_FIREBASE_SENDER_ID
     };
 
     this.app = firebase.initializeApp(config);
